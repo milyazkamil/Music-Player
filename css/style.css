@@ -1,0 +1,377 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+}
+
+
+.colorChange {
+    color: black;
+    transition: all 1s;
+    border-radius: 20px;
+    background-color: #dcb5ff60;
+}
+
+.colorChange.dark {
+    background-color: #2e024952;
+    color: white;
+}
+
+.mode-control input {
+    position: absolute;
+    opacity: 0;
+}
+
+.mode-control span:nth-of-type(2) {
+    display: none;
+}
+
+.mode-control input:checked + span {
+    display: none;
+}
+
+.mode-control input:checked + span + span{
+    display: inline-block;
+}
+
+.mode-control span {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 20px;
+    line-height: 30px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+}
+
+.mode-control > span > svg {
+    padding-bottom: 5px;
+}
+
+.colorChange.dark .mode-control span {
+    background-color: white;
+    color: black;
+}
+
+.main {
+    height: 100vh;
+}
+
+.phone {
+}
+
+.divHeader {
+    height: 10vh;
+    width: 25vw;
+    padding: 0 10px;
+    border-radius: 20px 20px 0 0;
+    border: 1px solid black;
+    border-bottom: none;
+    transition: all 1s;
+}
+
+.headerButton {
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+}
+
+.logo {
+    background-color: transparent;
+    border: none;
+}
+
+.logo > svg {
+    height: 6vh;
+    width: 6vh;
+}
+
+.divBody {
+    height: 78vh;
+    width: 25vw;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.circle {
+    height: 50vh;
+    border: 1px solid black;
+    border-bottom: none;
+}
+
+.disk {
+    position: relative;
+    display: block;
+    height: 250px;
+    width: 250px;
+    background-image: url("./images/cover\ 1.png");
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: #A91079 0px 0px 60px 20px;
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.disk.play {
+    animation-play-state: running;
+}
+
+.circle > img {
+    border-radius: 50%;
+    animation: rotation 6s infinite linear;
+}
+
+.soundName {
+    height: 10vh;
+    border: 1px solid black;
+    border-bottom: none;
+    padding: 0 10px;
+}
+
+.music-name , .artist-name {
+    text-transform: capitalize;
+}
+
+.music-name {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.randomButton {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+}
+
+
+
+.soundButton {
+    height: 5vh;
+}
+
+.musicName {
+    height: 5vh;
+}
+
+.musicName > p {
+    font-size: 14px;
+}
+
+.line {
+    height: 6vh;
+    border: 1px solid black;
+    border-bottom: none;
+}
+
+.song-slider {
+    position: relative;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.current-time, .song-duration {
+    font-size: 14px;
+}
+
+.seek-bar {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #7868E6;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1px;
+    height: 15px;
+    border-radius: 50%;
+    background: white   ;
+    box-shadow: -400px 0 0 400px #2E0249;
+}
+
+.playPause {
+    height: 13vh;
+    border: 1px solid black;
+    border-bottom: none;
+    padding: 0 10px;
+}
+
+.play-btn {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 0 15px;
+    background-color: #B8B5FF;
+    box-shadow: #7868E6 0px 0px 20px 5px;
+    border: none;
+}
+
+.play-btn span {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 30px;
+    border-radius: 5px;
+    background: black;
+    transition: 0.5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.play-btn  span:nth-child(2) {
+    left: 55%;
+    transform-origin: center;
+}
+
+.play-btn.pause span:nth-child(2) {
+    transform: translateY(-50%) scaleY(0);
+
+}
+
+.play-btn.pause span:nth-child(1) {
+    width: 35%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+
+.play-btn.pause {
+    animation: pulse 3s linear infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0;
+    }
+    100% {
+        box-shadow: 0 0 20px 10px #7868E6;
+    }
+}
+
+
+.backward-btn, .forward-btn, .dislike, .like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: #B8B5FF;
+    box-shadow: #7868E6 0px 0px 20px 5px;
+    border: none;
+}
+
+.dislike , .like {
+    border: none;
+}
+
+.divFooter {
+    height: 7vh;
+    width: 25vw;
+    border: 1px solid black;
+    border-bottom: none;
+    transition: all 1s;
+}
+
+.divFooter2 {
+    height: 5vh;
+    width: 25vw;
+    border-radius: 0 0 20px 20px;
+    border: 1px solid black;
+    border-top: none;
+    padding: 0 5px;
+    transition: all 1s;
+}
+
+.divFooter2 > div > p {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0;
+    text-shadow: 0px 0px 10px #7868E6;
+}
+
+.buttons {
+    width: 100%;
+    padding: 0 5px;
+    transition: all 1s;
+}
+
+.buttons.dark {
+    background-color: white;
+    color: black;
+}
+
+.buttons > div {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons  > div > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #B8B5FF;
+    box-shadow: #7868E6 0px 0px 20px 5px;
+}
+
+
+
+
+
+
+
+
+@media all and (max-width: 992px){
+    .divHeader {
+        height: 10vh;
+        width: 100vw;
+        border-radius: 0;
+    }
+    .divBody {
+        height: 78vh;
+        width: 100vw;
+        border-radius: 0;
+
+    }
+    .divFooter {
+        height: 7vh;
+        width: 100vw;
+        border-radius: 0;
+    }
+    .divFooter2 {
+        height: 5vh;
+        width: 100vw;
+        border-radius: 0;
+    }
+
+    .colorChange {
+        border-radius: 0px;
+    }
+}
