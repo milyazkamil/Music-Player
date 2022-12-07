@@ -11,15 +11,14 @@ img {
 
 
 .colorChange {
-    color: black;
-    transition: all 1s;
+    color: white;
+    transition: all 1.5s;
     border-radius: 20px;
-    background-color: #dcb5ff60;
+    background-color: #98b7e500;
 }
 
 .colorChange.dark {
-    background-color: #2e024952;
-    color: white;
+    background-color: #07080900;
 }
 
 .mode-control input {
@@ -61,8 +60,78 @@ img {
 .main {
     height: 100vh;
 }
+.arka {
+    z-index: 10;
+}
 
-.phone {
+.arkaplan {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    height: 100vh;
+    z-index: 0;
+}
+
+.day {
+    height: 100vh;
+    width: 25vw;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.7), transparent), url("./day.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 1.5s;
+    z-index: 10;
+}
+
+.day.opaklik {
+    opacity: 0;
+}
+
+.night {
+    height: 100vh;
+    width: 25vw;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.7), transparent), url("./night.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 1.5s;
+    z-index: 6;
+}
+
+.profileDiv {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    height: 100vh;
+    z-index: 15;
+}
+
+.profile {
+    height: 80vh;
+    width: 25vw;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 20px 20px 0px 0px;
+    transition: all 1.5s;
+    z-index: 15;
+}
+
+.profile2 {
+    height: 100vh;
+    width: 25vw;
+}
+
+.glassmorphism {
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 1.5px );
+    border-radius: 20px;
 }
 
 .divHeader {
@@ -72,49 +141,98 @@ img {
     border-radius: 20px 20px 0 0;
     border: 1px solid black;
     border-bottom: none;
-    transition: all 1s;
+    transition: all 1.5s;
 }
 
-.headerButton {
+.fBtn1, .fBtn2, .fBtn3, .fBtn4, .fBtn5 {
     height: 35px;
     width: 35px;
     border-radius: 50px;
+    background-color: rgba(255, 0, 0, 0.4);
+    box-shadow: #ff340c 0px 0px 20px 5px;
+    transition: all 1.5s;
 }
 
 .logo {
-    background-color: transparent;
-    border: none;
+    height: 45px;
+    width: 35px;
+    cursor: pointer;
 }
 
-.logo > svg {
-    height: 6vh;
-    width: 6vh;
+.logo > img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
 
 .divBody {
     height: 78vh;
     width: 25vw;
-    transition: all 1s;
+    transition: all 1.5s;
     overflow: hidden;
 }
 
 .circle {
-    height: 50vh;
+    height: 48vh;
     border: 1px solid black;
     border-bottom: none;
+    border-top: none;
 }
 
 .disk {
+    position: absolute;
+    display: block;
+    height: 250px;
+    width: 250px;
+    background-image: url("./images/cover\ 1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: #ff7700 0px 0px 40px 10px;
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+    transition: all 1.5s;
+    z-index: 90;
+}
+
+.libraryDiv, .addDiv, .settingsDiv, .profileDiv {
+    display: block;
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    transition: all 1.5s;
+    z-index: 100;
+}
+
+.degis {
+    display: block;
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    transition: all 1.5s;
+    z-index: 100;
+}
+
+.aaa {
+    
+}
+
+.disk.red {
     position: relative;
     display: block;
     height: 250px;
     width: 250px;
-    background-image: url("./images/cover\ 1.png");
+    background-image: url("./images/cover\ 1.jpg");
     background-size: cover;
-    border-radius: 50%;
-    box-shadow: #A91079 0px 0px 60px 20px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    box-shadow: #ffffff 0px 0px 40px 10px;
     animation: rotate 20s linear infinite;
     animation-play-state: paused;
+    transition: all 1.5s;
 }
 
 @keyframes rotate {
@@ -137,8 +255,6 @@ img {
 
 .soundName {
     height: 10vh;
-    border: 1px solid black;
-    border-bottom: none;
     padding: 0 10px;
 }
 
@@ -151,14 +267,17 @@ img {
     font-weight: 500;
 }
 
-.randomButton {
+.repeat, .shuffle {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background-color: transparent;
+    background-color: rgba(255, 0, 0, 0.4);
+    box-shadow: #ff340c 0px 0px 20px 5px;
     border: none;
+    transition: all 1.5s;
+    color: white;
+    margin: 0 5px;
 }
-
 
 
 .soundButton {
@@ -175,8 +294,6 @@ img {
 
 .line {
     height: 6vh;
-    border: 1px solid black;
-    border-bottom: none;
 }
 
 .song-slider {
@@ -194,24 +311,27 @@ img {
     width: 100%;
     height: 5px;
     border-radius: 10px;
-    background-color: #7868E6;
+    background-color: rgba(255, 0, 0, 0.4);
     cursor: pointer;
     overflow: hidden;
+    transition: all 1.5s;
+}
+
+.seek-bar.dark-mode {
+    background-color: #0048ff7b;
 }
 
 .seek-bar::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 1px;
+    width: 4px;
     height: 15px;
     border-radius: 50%;
-    background: white   ;
-    box-shadow: -400px 0 0 400px #2E0249;
+    background: rgb(0, 0, 0);
+    box-shadow: -400px 0 0 400px #ffffff;
 }
 
 .playPause {
     height: 13vh;
-    border: 1px solid black;
-    border-bottom: none;
     padding: 0 10px;
 }
 
@@ -221,9 +341,10 @@ img {
     width: 50px;
     border-radius: 50%;
     margin: 0 15px;
-    background-color: #B8B5FF;
-    box-shadow: #7868E6 0px 0px 20px 5px;
     border: none;
+    background-color: rgba(255, 0, 0, 0.4);
+    box-shadow: #ff340c 0px 0px 20px 5px;
+    transition: all 1.5s;
 }
 
 .play-btn span {
@@ -234,8 +355,8 @@ img {
     width: 5px;
     height: 30px;
     border-radius: 5px;
-    background: black;
-    transition: 0.5s;
+    background: white;
+    transition: 0.7s;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
@@ -265,8 +386,11 @@ img {
     0% {
         box-shadow: 0;
     }
-    100% {
+    50% {
         box-shadow: 0 0 20px 10px #7868E6;
+    }
+    100% {
+        box-shadow: 0;
     }
 }
 
@@ -279,21 +403,49 @@ img {
     width: 30px;
     border-radius: 50%;
     margin: 0 5px;
-    background-color: #B8B5FF;
-    box-shadow: #7868E6 0px 0px 20px 5px;
+    color: rgb(255, 255, 255);
     border: none;
+    background-color: rgba(255, 0, 0, 0.4);
+    box-shadow: #ff340c 0px 0px 20px 5px;
+    transition: all 1.5s;
 }
 
-.dislike , .like {
-    border: none;
+
+.repeat.active, 
+.shuffle.active,
+.like.active,
+.dislike.active,
+.fBtn1.active, 
+.fBtn2.active,
+.fBtn3.active, 
+.fBtn4.active, 
+.fBtn5.active {
+    background-color: rgba(255, 0, 0);
+    box-shadow: #ff340c 0px 0px 20px 5px;
+}
+
+.repeat.active.like-dark,
+.shuffle.active.like-dark, 
+.like.active.like-dark, 
+.dislike.active.like-dark, 
+.fBtn1.active.like-dark, 
+.fBtn2.active.like-dark, 
+.fBtn3.active.like-dark, 
+.fBtn4.active.like-dark, 
+.fBtn5.active.like-dark {
+    background-color: #0048ff;
+    box-shadow: #ffffff 0px 0px 20px 5px;
+}
+
+.cdn.like-dark {
+    background-color: #0048ff7b;
+    box-shadow: #7868E6 0px 0px 20px 5px;
 }
 
 .divFooter {
     height: 7vh;
     width: 25vw;
-    border: 1px solid black;
-    border-bottom: none;
-    transition: all 1s;
+    transition: all 1.5s;
 }
 
 .divFooter2 {
@@ -303,7 +455,7 @@ img {
     border: 1px solid black;
     border-top: none;
     padding: 0 5px;
-    transition: all 1s;
+    transition: all 1.5s;
 }
 
 .divFooter2 > div > p {
@@ -312,13 +464,14 @@ img {
     justify-content: center;
     cursor: pointer;
     margin: 0;
-    text-shadow: 0px 0px 10px #7868E6;
+    color: white;
+    text-shadow: 0px 0px 20px #ffffff;
 }
 
 .buttons {
     width: 100%;
     padding: 0 5px;
-    transition: all 1s;
+    transition: all 1.5s;
 }
 
 .buttons.dark {
@@ -337,18 +490,33 @@ img {
     justify-content: center;
     align-items: center;
     border: none;
-    background-color: #B8B5FF;
-    box-shadow: #7868E6 0px 0px 20px 5px;
+    color: rgb(255, 255, 255);
 }
 
 
 
 
-
-
-
-
 @media all and (max-width: 992px){
+    .phone {
+        height: 100vh;
+        width: 100vw;
+        border-radius: 0;
+    }
+
+    .arkaplan {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .glassmorphism {
+        border-radius: 0;
+    }
+
+    .day, .night {
+        height: 100vh;
+        width: 100vw;
+        border-radius: 0;
+    }
     .divHeader {
         height: 10vh;
         width: 100vw;
@@ -358,8 +526,24 @@ img {
         height: 78vh;
         width: 100vw;
         border-radius: 0;
-
     }
+
+    .disk {
+        height: 230px;
+        width: 230px;
+        box-shadow: #ff7700 0px 0px 50px 10px;
+    }
+
+    .disk.red {
+        height: 230px;
+        width: 230px;
+        box-shadow: #ffffff 0px 0px 50px 10px;
+    }
+
+    .circle {
+        height: 48vh;
+    }
+
     .divFooter {
         height: 7vh;
         width: 100vw;
