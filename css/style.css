@@ -2,6 +2,13 @@
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    /*disable selection*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 img {
@@ -10,14 +17,14 @@ img {
 }
 
 
-.colorChange {
+.color-change {
     color: white;
     transition: all 1.5s;
     border-radius: 20px;
     background-color: #98b7e500;
 }
 
-.colorChange.dark {
+.color-change.dark {
     background-color: #07080900;
 }
 
@@ -52,7 +59,7 @@ img {
     padding-bottom: 5px;
 }
 
-.colorChange.dark .mode-control span {
+.color-change.dark .mode-control span {
     background-color: white;
     color: black;
 }
@@ -64,7 +71,7 @@ img {
     z-index: 10;
 }
 
-.arkaplan {
+.bg-image {
     display: flex;
     justify-content: center;
     position: absolute;
@@ -102,7 +109,7 @@ img {
     z-index: 6;
 }
 
-.profileDiv {
+.profile-div {
     display: flex;
     justify-content: center;
     position: absolute;
@@ -134,7 +141,7 @@ img {
     border-radius: 20px;
 }
 
-.divHeader {
+.div-header {
     height: 10vh;
     width: 25vw;
     padding: 0 10px;
@@ -165,7 +172,7 @@ img {
     border-radius: 50%;
 }
 
-.divBody {
+.div-body {
     height: 78vh;
     width: 25vw;
     transition: all 1.5s;
@@ -197,14 +204,196 @@ img {
     z-index: 90;
 }
 
-.libraryDiv, .addDiv, .settingsDiv, .profileDiv {
+.library-div, .add-div, .settings-div, .profile-div {
     display: block;
     position: absolute;
     height: 90%;
     width: 100%;
     transition: all 1.5s;
     z-index: 100;
+    padding: 0 10px;
 }
+
+.scroll-songs {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 30vh;
+}
+
+.scroll-songs::-webkit-scrollbar {
+    background-color: rgb(156, 156, 156);
+    width: 5px;
+}
+
+.scroll-songs::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.scroll-songs::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(172, 172, 172);
+    border-radius: 5px;
+}
+
+
+.resimcik {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.choose-song {
+    margin-top: 10vh;
+    color: white;
+    height: 100px;
+    width: 200px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+.choose-song:hover {
+    border: 1px solid #ff340c;
+    box-shadow: #f35b3d 0px 0px 20px 5px; 
+}
+
+.choose-song.dark:hover {
+    border: 1px solid #0048ff7b;
+    box-shadow: #7868E6 0px 0px 20px 5px;
+}
+
+.add-div > div > h4 {
+    margin: 0;
+    padding: 10px;
+}
+
+.add-div > div > input {
+    content:'';
+}
+
+.profile-div > div > .profile-photo {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+}
+
+.find-friends {
+    height: 30px;
+    min-width: 140px;
+    border-radius: 10px;
+    border: 0.5px solid rgb(255, 255, 255);
+    background-color: transparent;
+    color: white;
+}
+
+.font-size {
+    font-size: 18px;
+}
+
+.profile-div > .followers {
+    padding-top: 40px;
+}
+
+.profile-div > .followers > div {
+    text-align: center;
+}
+
+.settings-div > div {
+    padding-bottom: 15px;
+}
+
+.settings-div > div > p {
+    font-size: 18px;
+    margin: 0;
+}
+.settings-div > div > select {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    width: 100px;
+}
+
+.settings-div > div > select > option {
+    color: white;
+    background-color: black;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 6px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: rgba(37, 171, 37);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px rgba(37, 171, 37);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 25px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
 
 .degis {
     display: block;
@@ -213,10 +402,6 @@ img {
     width: 100%;
     transition: all 1.5s;
     z-index: 100;
-}
-
-.aaa {
-    
 }
 
 .disk.red {
@@ -253,7 +438,7 @@ img {
     animation: rotation 6s infinite linear;
 }
 
-.soundName {
+.sound-name {
     height: 10vh;
     padding: 0 10px;
 }
@@ -280,15 +465,15 @@ img {
 }
 
 
-.soundButton {
+.sound-button {
     height: 5vh;
 }
 
-.musicName {
+.music-name {
     height: 5vh;
 }
 
-.musicName > p {
+.music-name > p {
     font-size: 14px;
 }
 
@@ -330,7 +515,7 @@ img {
     box-shadow: -400px 0 0 400px #ffffff;
 }
 
-.playPause {
+.play-pause {
     height: 13vh;
     padding: 0 10px;
 }
@@ -387,7 +572,7 @@ img {
         box-shadow: 0;
     }
     50% {
-        box-shadow: 0 0 20px 10px #7868E6;
+        box-shadow: 0 0 20px 10px #ffffff80;
     }
     100% {
         box-shadow: 0;
@@ -442,13 +627,13 @@ img {
     box-shadow: #7868E6 0px 0px 20px 5px;
 }
 
-.divFooter {
+.div-footer {
     height: 7vh;
     width: 25vw;
     transition: all 1.5s;
 }
 
-.divFooter2 {
+.div-footer2 {
     height: 5vh;
     width: 25vw;
     border-radius: 0 0 20px 20px;
@@ -458,7 +643,7 @@ img {
     transition: all 1.5s;
 }
 
-.divFooter2 > div > p {
+.div-footer2 > div > p {
     width: 20%;
     display: flex;
     justify-content: center;
@@ -503,7 +688,7 @@ img {
         border-radius: 0;
     }
 
-    .arkaplan {
+    .bg-image {
         height: 100vh;
         width: 100vw;
     }
@@ -517,12 +702,12 @@ img {
         width: 100vw;
         border-radius: 0;
     }
-    .divHeader {
+    .div-header {
         height: 10vh;
         width: 100vw;
         border-radius: 0;
     }
-    .divBody {
+    .div-body {
         height: 78vh;
         width: 100vw;
         border-radius: 0;
@@ -544,18 +729,18 @@ img {
         height: 48vh;
     }
 
-    .divFooter {
+    .div-footer {
         height: 7vh;
         width: 100vw;
         border-radius: 0;
     }
-    .divFooter2 {
+    .div-footer2 {
         height: 5vh;
         width: 100vw;
         border-radius: 0;
     }
 
-    .colorChange {
+    .color-change {
         border-radius: 0px;
     }
 }

@@ -1,22 +1,21 @@
 let currentMusic = 0;
 const music = document.querySelector("#audio");
- 
 const seekBar = document.querySelector(".seek-bar");
 const songName = document.querySelector(".music-name");
 const artistName = document.querySelector(".artist-name");
-
 const disk = document.querySelector(".disk");
-const libraryDiv = document.querySelector(".libraryDiv");
-const addDiv = document.querySelector(".addDiv");
-const settingsDiv = document.querySelector(".settingsDiv");
-const profileDiv = document.querySelector(".profileDiv");
-
+const libraryDiv = document.querySelector(".library-div");
+const scrollSongs = document.querySelector(".scroll-songs");
+const addDiv = document.querySelector(".add-div");
+const chooseSong = document.querySelector(".choose-song");
+const settingsDiv = document.querySelector(".settings-div");
+const profileDiv = document.querySelector(".profile-div");
 const currentTime = document.querySelector(".current-time");
 const musicDuration = document.querySelector(".song-duration");
 const playBtn = document.querySelector(".play-btn");
 const forwardBtn = document.querySelector(".forward-btn");
 const backwardBtn = document.querySelector(".backward-btn");
-const colorChange = document.querySelector(".colorChange");
+const colorChange = document.querySelector(".color-change");
 const phone = document.querySelector(".phone");
 const day = document.querySelector(".day");
 const night = document.querySelector(".night");
@@ -53,21 +52,29 @@ document.getElementById("mode-btn").addEventListener("click", ()=> {
     fBtn3.classList.toggle("like-dark");
     fBtn4.classList.toggle("like-dark");
     fBtn5.classList.toggle("like-dark");
-    /*
-    footerButtons[0].classList.toggle("like-dark");
-    footerButtons[1].classList.toggle("like-dark");
-    footerButtons[2].classList.toggle("like-dark");
-    footerButtons[3].classList.toggle("like-dark");
-    footerButtons[4].classList.toggle("like-dark");
-    */
+    chooseSong.classList.toggle("dark");
     repeat.classList.toggle("like-dark");
     shuffle.classList.toggle("like-dark");
- 
-    //position relative ile arkaya div koy o dive resim ekle 
-    //resimi ortalamak için githubdaki url in sonuna center kodlarını ekle
 });
 
+songs.forEach(islem);
 
+function islem(arac, index) {
+    let html_kodu = `
+       <p>${index + 1} <span>${arac.name}</span> </p>
+       <p> ‏ - <span>${arac.artist}</span> </p>
+       <img class = "resimcik" src="${arac.cover}">
+       <br>`;
+
+     let htmlElemani = document.createElement("div");
+     htmlElemani.style.display = "flex";
+     htmlElemani.style.alignItems = "center";
+     htmlElemani.style.textAlign = "center";
+     htmlElemani.style.paddingBottom = "15px";
+     htmlElemani.style.textAlign = "center";
+     htmlElemani.innerHTML = html_kodu;
+     scrollSongs.append(htmlElemani);
+}; 
 
 playBtn.addEventListener("click", () => {
     if (playBtn.className.includes("pause")) {
@@ -96,10 +103,7 @@ const setMusic = (i) => {
 }
 setMusic(0);
 
-
-
 //formatting time in min and seconds format
-
 const formatTime = (time) => {
     let min = Math.floor(time / 60);
     if (min < 10) {
@@ -141,7 +145,6 @@ like.addEventListener("click", () => {
 dislike.addEventListener("click", () => {
     dislike.classList.toggle("active");
 });
-
 
 fBtn1.addEventListener("click", () => {
     fBtn1.classList.toggle("active");

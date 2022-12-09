@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/logo.png">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <title>Music Player</title>
@@ -15,8 +16,8 @@
             <div class="col-12 arka d-flex justify-content-center">
                 <div class="phone">
                     <div class="glassmorphism">
-                        <div class="colorChange">
-                            <div class="divHeader d-flex justify-content-between align-items-center">
+                        <div class="color-change">
+                            <div class="div-header d-flex justify-content-between align-items-center">
                                 <div class="d-flex">
                                     <div class="logo">
                                         <img src="./images/logo.png" alt="logo">
@@ -30,28 +31,85 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="divBody">
+                            <div class="div-body">
                                 <div class="circle position-relative d-flex justify-content-center align-items-center">
                                     <div class="disk"></div>
-                                    <div class="libraryDiv">
-                                        <h1>Library</h1>
-                                        <p>profile profile profile</p>
+                                    <div class="library-div">
+                                        <div>
+                                            <h3>Playlists <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19 9H2v2h17V9zm0-4H2v2h17V5zM2 15h13v-2H2v2zm15-2v6l5-3-5-3z"></path></svg></h3>
+                                        </div>
+                                        <div class="scroll-songs">
+
+                                        </div>
                                     </div>
-                                    <div class="addDiv">
-                                        <h1>Add</h1>
-                                        <p>Settings Settings Settings</p>
+                                    <div class="add-div">
+                                        <div class="d-flex justify-content-center">
+                                            <h3>Add any song to playlist</h3>
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <input type="file" id="file">
+                                            <label class="choose-song" for="file">
+                                                Choose a song <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                            </label>
+                                        </div>
                                     </div>
-                                    <div class="settingsDiv">
-                                        <h1>Settings</h1>
-                                        <p>Settings Settings Settings</p>
+                                    <div class="settings-div">
+                                        <div class="d-flex justify-content-center">
+                                            <h3>Audio Quality</h3>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="">Wifi Streaming</p>
+                                            <select class="bottom-border" name="cars">
+                                                <option value="Very High">Very High</option>
+                                                <option value="High">High</option>
+                                                <option value="Normal">Normal</option>
+                                                <option value="Low">Low</option>
+                                            </select>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <p>Cellular Streaming</p>
+                                            <select class="bottom-border" name="cars">
+                                                <option value="Automatic">Automatic</option>
+                                                <option value="Disable">Disable</option>
+                                            </select>
+                                        </div>
+                                        <div class="d-flex text-align-items align-items-center justify-content-between">
+                                            <p>Download</p>
+                                            <select class="bottom-border" name="cars">
+                                                <option value="Normal">Normal</option>
+                                                <option value="Low">Low</option>
+                                            </select>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <p>Download Using Cellular</p>
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
                                     </div>
-                                    <div class="profileDiv">
-                                        <h1>Profile</h1>
-                                        <p>Settings Settings Settings</p>
+                                    <div class="profile-div">
+                                        <div class="d-flex">
+                                            <img class="profile-photo" src="./images/cover 5.jpg" alt="profile photo">
+                                            <div class="p-3">
+                                                <h3>Milyaz Kamil</h3>
+                                                <button class="find-friends">Find Friends <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M678.3 642.4c24.2-13 51.9-20.4 81.4-20.4h.1c3 0 4.4-3.6 2.2-5.6a371.67 371.67 0 0 0-103.7-65.8c-.4-.2-.8-.3-1.2-.5C719.2 505 759.6 431.7 759.6 349c0-137-110.8-248-247.5-248S264.7 212 264.7 349c0 82.7 40.4 156 102.6 201.1-.4.2-.8.3-1.2.5-44.7 18.9-84.8 46-119.3 80.6a373.42 373.42 0 0 0-80.4 119.5A373.6 373.6 0 0 0 137 888.8a8 8 0 0 0 8 8.2h59.9c4.3 0 7.9-3.5 8-7.8 2-77.2 32.9-149.5 87.6-204.3C357 628.2 432.2 597 512.2 597c56.7 0 111.1 15.7 158 45.1a8.1 8.1 0 0 0 8.1.3zM512.2 521c-45.8 0-88.9-17.9-121.4-50.4A171.2 171.2 0 0 1 340.5 349c0-45.9 17.9-89.1 50.3-121.6S466.3 177 512.2 177s88.9 17.9 121.4 50.4A171.2 171.2 0 0 1 683.9 349c0 45.9-17.9 89.1-50.3 121.6C601.1 503.1 558 521 512.2 521zM880 759h-84v-84c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v84h-84c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h84v84c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-84h84c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8z"></path></svg></button>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex followers justify-content-between">
+                                            <div class="ms-4">
+                                                <p class="font-size">Followers <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></p>
+                                                190
+                                            </div>
+                                            <div class="me-4">
+                                                <p class="font-size">Following <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg></p>
+                                                55
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="soundName">
-                                    <div class="soundButton d-flex justify-content-between align-items-center">
+                                <div class="sound-name">
+                                    <div class="sound-button d-flex justify-content-between align-items-center">
                                         <div >
                                             <p class="music-name m-0"></p>
                                         </div>
@@ -60,7 +118,7 @@
                                             <button class="shuffle cdn"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M17,17h-1.559l-9.7-10.673C5.552,6.119,5.283,6,5.001,6H2v2h2.559l4.09,4.5l-4.09,4.501H2v2h3.001 c0.282,0,0.551-0.119,0.74-0.327L10,13.987l4.259,4.686C14.448,18.881,14.717,19,14.999,19H17v3l5-4l-5-4V17z"></path><path d="M15.441,8H17v3l5-3.938L17,3v3h-2.001c-0.282,0-0.551,0.119-0.74,0.327l-3.368,3.707l1.48,1.346L15.441,8z"></path></svg></button>
                                         </div>
                                     </div>
-                                    <div class="musicName d-flex align-items-center">
+                                    <div class="music-name d-flex align-items-center">
                                         <p class="artist-name m-0">Artist</p>
                                     </div>
                                 </div>
@@ -73,7 +131,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="playPause d-flex justify-content-between align-items-center">
+                                <div class="play-pause d-flex justify-content-between align-items-center">
                                     <div>
                                         <button class="dislike cdn"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M20,3h-3H6.693C5.864,3,5.112,3.521,4.82,4.298l-2.757,7.351C2.021,11.761,2,11.88,2,12v2c0,1.103,0.897,2,2,2h5.612 L8.49,19.367c-0.203,0.608-0.101,1.282,0.274,1.802C9.14,21.689,9.746,22,10.388,22H12c0.297,0,0.578-0.132,0.769-0.36l4.7-5.64 H20c1.103,0,2-0.897,2-2V5C22,3.897,21.103,3,20,3z M11.531,20h-1.145l1.562-4.684c0.103-0.305,0.051-0.64-0.137-0.901 C11.623,14.154,11.321,14,11,14H4v-1.819L6.693,5H16v9.638L11.531,20z M18,14V5h2l0.001,9H18z"></path></svg></button>
                                     </div>
@@ -90,13 +148,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="divFooter d-flex justify-content-between align-items-center">
+                            <div class="div-footer d-flex justify-content-between align-items-center">
                                 <div class="buttons d-flex">
                                     <div>
                                         <button class="fBtn1 cdn"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"></path></svg></button>
                                     </div>
                                     <div>
-                                        <button class="fBtn2 cdn"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 5h-3v5.5c0 1.38-1.12 2.5-2.5 2.5S10 13.88 10 12.5s1.12-2.5 2.5-2.5c.57 0 1.08.19 1.5.51V5h4v2zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z"></path></svg></button>
+                                        <button class="fBtn2 cdn"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M12.414 5H21a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h7.414l2 2zM4 5v14h16V7h-8.414l-2-2H4zm7 8.05V9h5v2h-3v4.5a2.5 2.5 0 1 1-2-2.45z"></path></g></svg></button>
                                     </div>
                                     <div>
                                         <button class="fBtn3 cdn"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M13 7L11 7 11 11 7 11 7 13 11 13 11 17 13 17 13 13 17 13 17 11 13 11z"></path><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10c5.514,0,10-4.486,10-10S17.514,2,12,2z M12,20c-4.411,0-8-3.589-8-8 s3.589-8,8-8s8,3.589,8,8S16.411,20,12,20z"></path></svg></button>
@@ -109,10 +167,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="divFooter2">
+                            <div class="div-footer2">
                                 <div class="d-flex justify-content-between">
                                     <p>Main</p>
-                                    <p>Library</p>
+                                    <p>Playlists</p>
                                     <p>Add</p>
                                     <p>Settings</p>
                                     <p>Profile</p>
@@ -122,7 +180,7 @@
                     </div>
                 </div>
             </div>
-            <div class="arkaplan col-12">
+            <div class="bg-image col-12">
                 <div class="position-relative">
                     <div class="day position-absolute"></div>
                     <div class="night"></div>
